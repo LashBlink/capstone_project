@@ -59,8 +59,8 @@ st.altair_chart(chart, use_container_width=True)
 col1, col2, col3 = st.columns([1, 3, 1])
 
 with col2:
-    st.markdown(
-        """<div style='text-align: center'> Sumber data: Badan Pusat Statistik</div>""",
+    st.write(
+        """<div style='text-align: center'> Sumber data: Portal Satu Data Pertanian</div>""",
         unsafe_allow_html=True,
     )
 st.write(
@@ -101,7 +101,7 @@ st.altair_chart(chart, use_container_width=True)
 kol1, kol2, kol3 = st.columns([1, 3, 1])
 with kol2:
     st.markdown(
-        """<div style='text-align: center'> Sumber data: Badan Pusat Statistik</div>
+        """<div style='text-align: center'> Sumber data: Portal Satu Data Pertanian</div>
         
         """,
         unsafe_allow_html=True,
@@ -139,7 +139,7 @@ st.plotly_chart(fig, use_container_width=True)
 kolom1, kolom2, kolom3 = st.columns([1, 3, 1])
 with kolom2:
     st.markdown(
-        """<div style='text-align: center'> Sumber data: Badan Pusat Statistik</div>
+        """<div style='text-align: center'> Sumber data: Portal Satu Data Pertanian</div>
         
         """,
         unsafe_allow_html=True,
@@ -163,7 +163,7 @@ st.altair_chart(chart, use_container_width=True)
 kolom1, kolom2, kolom3 = st.columns([1, 3, 1])
 with kolom2:
     st.markdown(
-        """<div style='text-align: center'> Sumber data: Badan Pusat Statistik</div>
+        """<div style='text-align: center'> Sumber data: Portal Satu Data Pertanian</div>
         
         """,
         unsafe_allow_html=True,
