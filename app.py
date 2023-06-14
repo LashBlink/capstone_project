@@ -97,7 +97,19 @@ chart = alt.Chart(merge_luas_prod).transform_fold(
     y='value:Q',
     color='key:N'
 )
-st.altair_chart(chart, use_container_width=True)
+# Menambahkan label pada bar chart
+text = chart.mark_text(
+    align='center',
+    baseline='middle',
+    dy=-5  # Mengatur posisi label di atas bar
+).encode(
+    text='value:Q', # Menampilkan nilai di atas bar
+    color=alt.value('white') # Mengatur warna
+)
+
+# Menggabungkan chart dan label
+chart_with_labels = (chart + text)
+st.altair_chart(chart_with_labels, use_container_width=True)
 kol1, kol2, kol3 = st.columns([1, 3, 1])
 with kol2:
     st.markdown(
@@ -114,7 +126,7 @@ st.markdown(
     Terdapat hubungan kuat antara luas areal kelapa sawit dengan produksi kelapa sawit di Indonesia yang dapat dilihat pada chart
     di atas dimana seiring bertambahnya luas areal kelapa sawit maka produksi kelapa sawit juga ikut naik.
     
-    Saat ini provinsi sentra yang menguasai produksi kelapa sawit di Indonesia pada tahun 2015-2010 berada di pulau Sumatera dan Kalimantan.
+    Saat ini provinsi sentra yang menguasai produksi kelapa sawit di Indonesia pada tahun 2015-2020 berada di pulau Sumatera dan Kalimantan.
     Hal ini bisa terjadi dikarenakan kondisi fisik dan lingkungan pada pulau Sumatera dan Kalimantan sangat mendukung untuk perkembangan Kelapa Sawit. 
     
     </div>
@@ -175,7 +187,7 @@ st.markdown(
     
     Harga TBS bulanan mengalami fluktuasi dari waktu ke waktu, dapat dipengaruhi oleh faktor-faktor seperti penawaran dan permintaan, kebijakan pemerintah, dan faktor-faktor ekonomi lainnya.
     Harga TBS cenderung meningkat dengan harga per tahun sebesar 13,82%. Harga tertinggi TBS
-    terjadi pada bulan September 2021 sebesar Rp. 2536 per Kg, sedangkan terendah terjadi pada bulan Desember 2018
+    terjadi pada bulan September 2021 sebesar Rp. 2.536 per Kg, sedangkan terendah terjadi pada bulan Desember 2018
     sebesar Rp. 1.143 per kg.
     Harga pembelian TBS merupakan harga yang ditetapkan oleh pemerintah.
     
