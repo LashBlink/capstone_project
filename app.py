@@ -104,7 +104,7 @@ text = chart.mark_text(
     dy=-5  # Mengatur posisi label di atas bar
 ).encode(
     text='value:Q', # Menampilkan nilai di atas bar
-    color=alt.value('white') # Mengatur warna
+    color=alt.value('black') # Mengatur warna
 )
 
 # Menggabungkan chart dan label
